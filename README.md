@@ -4,4 +4,4 @@ A real-time chat app.
 
 ## Stack
 
-TBD
+TypeScript · React + Vite · Fastify · PostgreSQL (Drizzle) · Docker

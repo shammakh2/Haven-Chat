@@ -1,0 +1,27 @@
+services:
+  postgres:
+    image: postgres:18.4
+    environment:
+      - POSTGRES_PASSWORD=changeme
+      - POSTGRES_DB=haven
+    ports:
+      - "5432:5432"
+    volumes:
+      - type: volume
+        source: pg-data
+        target: /var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      retries: 5
+
+  redis:
+    image: redis:8
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
+volumes:
+  pg-data:
+  redis-data:
