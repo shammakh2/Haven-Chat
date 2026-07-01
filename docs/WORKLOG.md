@@ -15,3 +15,8 @@ Next: Fastify server, Docker, Postgres, Redis, User/Auth.
 
 Did: setting up docker, postgres, redis.
 Next: Fastify server, start User Auth.
+
+## 2026-07-02
+
+Did: setting up npm workspaces, basic fastify server.
+Next:start User Auth register and login logic.

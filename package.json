@@ -4,7 +4,7 @@
   "description": "",
   "license": "GPL-2.0-only",
   "author": "",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -22,7 +22,6 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@fastify/cors": "^11.2.0",
     "@types/node": "^26.0.1",
     "eslint": "^10.5.0",
     "eslint-config-prettier": "^10.1.8",
@@ -32,7 +31,9 @@
     "typescript-eslint": "^8.62.0",
     "vitest": "^4.1.9"
   },
-  "dependencies": {
-    "fastify": "^5.8.5"
-  }
+  "workspaces": [
+    "src/api",
+    "src/web",
+    "packages/shared"
+  ]
 }
